@@ -13,3 +13,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Lienol/openwrt-package
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+# OpenClash for Luci
+git clone https://github.com/vernesong/OpenClash package/OpenClash
+./scripts/feeds update luci-app-openclash
+./scripts/feeds install luci-app-openclash
